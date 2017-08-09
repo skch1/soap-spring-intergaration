@@ -1,0 +1,22 @@
+<web-app>
+	<display-name>Spring + JAX-WS</display-name>
+	<servlet>
+    	<servlet-name>jaxws-servlet</servlet-name>
+    	<servlet-class>
+    		com.sun.xml.ws.transport.http.servlet.WSSpringServlet
+    	</servlet-class>
+  	</servlet>
+	
+	<servlet-mapping>
+        <servlet-name>jaxws-servlet</servlet-name>
+        <url-pattern>/registerProduct</url-pattern>
+    </servlet-mapping>
+ 
+    <!-- Register Spring Listener -->
+  	<listener>
+    	<listener-class>
+    		org.springframework.web.context.ContextLoaderListener
+    	</listener-class>
+  	</listener>
+  	
+</web-app>
